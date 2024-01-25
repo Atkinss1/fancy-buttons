@@ -1,5 +1,5 @@
 function LightSwitchButton(props) {
-  const {light, switchLight} = props;  
+  const {light, switchLight} = props;
 
   return(
     <button onClick={switchLight} className="LightSwitchButton">

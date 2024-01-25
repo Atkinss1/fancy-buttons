@@ -5,6 +5,7 @@ function TextRepeaterButton(props) {
 
   const handleClick = () => {
     setRepetitions(repetitions + 1);
+    props.increaseAnger(0.1);
   }
 
   const textArray = [];
