@@ -3,15 +3,15 @@ import { useState } from 'react';
 function AngryButton(props) {
   const [anger, setAnger] = useState(0);
 
-  const increaseAnger = () => {
-    if (anger >= 1) {
-      anger = anger + 0.1
+  const handleClick = (amount) => {
+    if (anger < 1) {
+      setAnger(anger + amount)
     } else {
       setAnger(0);
     }
   }
   return (
-    <button className="AngryButton" style={{backgroundColor: 
+    <button onClick={() => {handleClick(0.1)}} className="AngryButton" style={{backgroundColor: 
     `rgba(255,0,0,${anger})`}}>
     {anger > 1 ? <span>Rawr!</span> : <span>Don't click me too much! </span>}
   </button>
